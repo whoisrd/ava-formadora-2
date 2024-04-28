@@ -1,0 +1,74 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculadora de IMC
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<!-- <div>
+  <label>Peso:</label> <input id="peso" type="number" placeholder="peso em kilos">
+  <br />
+  <label>Altura:</label> <input id="altura" type="number" placeholder="altura em metros">
+</div> -->
+
+<ion-list>
+  <ion-item>
+    <ion-label color="primary">Digite seu peso:</ion-label>
+    <ion-input [(ngModel)]="peso"> </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary">Digite sua altura:</ion-label>
+    <ion-input [(ngModel)]="altura"> </ion-input>
+  </ion-item>
+</ion-list>
+
+<ion-button (click)="Calcular()">Calcular</ion-button>
+
+<ion-list>
+  <ion-item>
+    <h3>VEJA A INTERPRETAÇÃO DO IMC</h3>
+  </ion-item>
+
+  <ion-item>
+    <ion-list>
+
+      <ion-item>
+        <ion-label color="primary">CLASSIFICAÇÃO</ion-label>
+        <ion-label >IMC</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary"> MAGREZA</ion-label>
+        <ion-label>MENOR QUE 18.5</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary"> NORMAL</ion-label>
+        <ion-label>ENTRE 18,5 E 24,9</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary"> SOBREPESO</ion-label>
+        <ion-label>ENTRE 25 E 29,9</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary"> OBESIDADE</ion-label>
+        <ion-label>ENTRE 30,0 E 39,9</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary"> OBESIDADE<br>GRAVE</ion-label>
+        <ion-label>MAIOR QUE 40,0</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-item>
+</ion-list>
+<br><br>
+<h2>SEU IMC É:</h2><ion-label>{{resultado}}</ion-label>
+
+</ion-content>
